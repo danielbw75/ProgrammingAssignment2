@@ -1,7 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These two functions create a matrix and give me the inverse of this matrix
 
-## Write a short comment describing this function
+
+## The first function is a set(list) of 4 functions
+##1)set Matrix makes a new Matrix and stores its value in the Main Function
+##2)get Matrix simply prints the stored Matrix
+##3)set Inverse make the inverse of the Matrix and store it in the Main Function
+##4)get Inverse simplu prints the stored inverse
 
 makeCacheMatrix <- function(x = matrix()) {
         s <-NULL
@@ -16,7 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
-## Write a short comment describing this function
+## This function gives the inverse of the Matrix, but first,
+##before calculating it again, checks if it is stored in the Main Function
 
 cacheSolve <- function(x, ...) {
         s<-x$getInverse()
@@ -31,32 +36,3 @@ cacheSolve <- function(x, ...) {
         
         ## Return a matrix that is the inverse of 'x'
 }
-
-
-
-#Rprogramming assignement 2 example
-#makeVector <- function(x = numeric()) {
-#        m <- NULL
-#        set <- function(y) {
-#                x <<- y
-#               m <<- NULL
-#        }
-#        get <- function() x
-#        setmean <- function(mean) m <<- mean
-#        getmean <- function() m
-#        list(set = set, get = get,
-#             setmean = setmean,
-#             getmean = getmean)
-#        
-#        cachemean <- function(x, ...) {
-#                m <- x$getmean()
-#                if(!is.null(m)) {
-#                        message("getting cached data")
-#                        return(m)
-#                }
-#                data <- x$get()
-#                m <- mean(data, ...)
-#                x$setmean(m)
-#                m
-#        }
-#}
